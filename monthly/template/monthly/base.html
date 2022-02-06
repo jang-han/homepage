@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<!--
+	Soul by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+
+<html>
+    <head>
+        {% include "monthly/headtag.html" %}
+    </head>
+
+    <body id="home">
+       
+       <!-- Back to Top Button --> 
+       <a href="#home" class="scroll backtotop">
+           <i class="fa fa-angle-up"> </i>
+       </a>
+        
+       <!-- Start of Header --> 
+       <header> 
+           <div class="row"> 
+               <div class="large-4 medium-12 column"> 
+                   <div class="logoholder">
+                       <a href="#home" class="scroll"><img src="{% static '/monthly/images/logo.png' %}" alt="logo.png" title=""></a>
+                   </div>
+               </div>
+               <div class="large-8 medium-12 column">
+                   <nav> 
+                       <ul> 
+                           <li><a href="{% url 'index' %}" class="">Home</a></li>
+                           <li>/</li>
+                           <li><a href="{% url 'monthly' %}" class="">Monthly Meal Plan</a></li>
+                           <li>/</li>
+                           <li><a href="#services" class="scroll">Services</a></li>
+                           <li>/</li>
+                           <li><a href="#team" class="scroll">Team</a></li>
+                           <li>/</li>
+                           <li><a href="#works" class="scroll">Works</a></li>
+                           <li>/</li>
+                           <li><a href="#contact" class="scroll">Contact</a></li>
+                       </ul>
+                   </nav>
+               </div>
+               
+               <div class="large-12 column">
+                   <div class="sep"> </div>
+               </div>
+               
+           </div>
+       </header>
+       <!-- End of Header -->
+       
+       {% block content %}{% endblock %}
+       
+       <!-- Start of Footer -->
+       <footer>
+           <div class="row">
+               <div class="large-6 medium-12 column">
+                   <ul class="social fa-ul"> 
+                        <li><a href="#"><i class="fa fa-li fa-dribbble"> </i> <span>DRIBBLE<span></a></li>
+                        <li><a href="#"><i class="fa fa-li fa-twitter"> </i> <span>TWITTER<span></a></li>
+                        <li><a href="#"><i class="fa fa-li fa-skype"> </i> <span>SKYPE<span></a></li>                
+                   </ul>
+               </div>
+               <div class="large-6 medium-12 column">
+                   <div class="copyright">
+                       © Soul 2015. ALL RIGHTS RESERVED Create By <a href="http://templatestock.co">Template Stock</a>
+                   </div>   
+               </div>
+           </div>
+       </footer>
+       <!-- End of Footer -->
+       
+    </body>
+</html>
