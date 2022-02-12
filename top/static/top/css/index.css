@@ -1,0 +1,59 @@
+.index_page {
+    text-align: center;
+    margin: auto;
+    padding: 200px;     /* 余白指定 */
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    font-family: arial black;
+    /*線の種類（実線） 太さ 色*/
+    border-bottom: solid 3px black;
+    margin: 20px;
+}
+
+.center_photo {	
+    text-align: center;
+    margin: auto;
+    padding:  150px 150px;                      /* 余白指定 */
+    border: solid 2px;                          /* 枠線指定 */
+    background-image: url(../images/food.jpg);
+    background-repeat:  no-repeat;              /* 画像の繰り返しを指定  */              
+    background-position:center center;          /* 画像の表示位置を指定  */
+    background-size:cover;                      /* 画像のサイズを指定    */
+    width:75%;                                  /* 横幅のサイズを指定    */
+    height:60%;                                 /* 縦幅のサイズを指定    */
+}
+
+.center_text {
+    position: relative;
+    padding: 0.25em 1em;
+    border: solid 2px black;
+    border-radius: 3px 0 3px 0;
+    background-color: rgba(255, 255, 255, 0.7);    
+    font-size: 30px;
+    font-family: arial black;
+}
+
+.center_text:before, .center_text:after {
+    content: '';
+    position: absolute;
+    width:10px;
+    height: 10px;
+    border: solid 2px black;
+    border-radius: 50%;
+}
+
+.center_text:after {
+    top:-12px;
+    left:-12px;
+}
+.center_text:before {
+    bottom:-12px;
+    right:-12px;
+}
+
+a {
+    text-decoration:none; 
+}

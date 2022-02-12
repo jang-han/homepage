@@ -1,0 +1,49 @@
+{% load static %}
+{% block sidebar %} 
+<header class="">
+    <div class="navbar navbar-default visible-xs">
+      <button type="button" class="navbar-toggle collapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="{% url 'top' %}" class="navbar-brand">キッチンメインページ</a>
+    </div>
+  
+    <nav class="sidebar">
+      <div class="navbar-collapse" id="navbar-collapse">
+        <div class="site-header hidden-xs">
+            <a class="site-brand" href="{% url 'top' %}" title="">
+              <img class="img-responsive site-logo" alt="" src="{% static '/top/images/recipescookingbook.png' %}">
+              キッチンメインページ
+            </a>
+          <p>料理スケジュール、<br>冷蔵庫の食材管理、<br>新しいメニューを追加してみよう！</p>
+        </div>
+        <ul class="nav">
+          <li><a href="{% url 'top' %}" title="">メイン画面</a></li>
+          <li><a href="{% url 'refrigerator' %}" title="">冷蔵庫</a></li>
+          <li><a href="{% url 'dishes' %}" title="">料理</a></li>
+          <li><a href="{% url 'dishschedule' %}" title="">料理スケジュール</a></li>
+  
+        </ul>
+  
+        <nav class="nav-footer">
+          <p class="nav-footer-social-buttons">
+            <a class="fa-icon" href="https://www.instagram.com/" title="">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a class="fa-icon" href="https://dribbble.com/" title="">
+              <i class="fa fa-dribbble"></i>
+            </a>
+            <a class="fa-icon" href="https://twitter.com/" title="">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </p>
+          <p>© Untitled | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+        </nav>  
+      </div> 
+    </nav>
+  </header>
+  <main class="" id="main-collapse">
+{% endblock %}
