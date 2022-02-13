@@ -5,28 +5,48 @@
 <div class="row">
   <div class="col-xs-12 section-container-spacer">
     <h1>トップページ</h1>
-    <p>確認したいメニューを選ぼう！ <br>メニュー毎の詳細が確認できる！</p>
+    <p>確認したいメニューを選ぼう！ <br>メニュー毎の詳細が確認できる！ <br> <h4>料理登録件数：{{total_count}}</h4></p>
   </div>
 
   <div class="col-xs-12 col-md-4 section-container-spacer">
-    <img class="img-responsive" alt="" src="{% static 'top/images/img-12.jpg' %}">
-    <h2>Consectetur</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <a href="./contact.html" class="btn btn-primary" title=""> Get in touch</a>
+    <img class="img-responsive" alt="" src="{% static 'top/images/westernfood.png' %}">
+    <h2>洋食</h2>
+    <p><h5>登録件数 ： {{western_food_count}}</h5></p>
+    <a href="./contact.html" class="btn btn-primary" title=""> 洋食リストへ</a>
   </div>
 
   <div class="col-xs-12 col-md-4 section-container-spacer">
-    <img class="img-responsive" alt="" src="{% static 'top/images/img-13.jpg' %}">
-    <h2>Adipiscing</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <a href="./contact.html" class="btn btn-primary" title=""> Get in touch</a>
+    <img class="img-responsive" alt="" src="{% static 'top/images/japanesefood.png' %}">
+    <h2>和食</h2>
+    <p><h5>登録件数 ： {{japanese_food_count}}</h5></p>
+    <a href="./contact.html" class="btn btn-primary" title=""> 和食リストへ</a>
   </div>
 
   <div class="col-xs-12 col-md-4 section-container-spacer">
-    <img class="img-responsive" alt="" src="{% static 'top/images/img-14.jpg' %}">
-    <h2>Dolor</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <a href="./contact.html" class="btn btn-primary" title=""> Get in touch</a>
+    <img class="img-responsive" alt="" src="{% static 'top/images/koreanfood.png' %}">
+    <h2>韓食</h2>
+    <p><h5>登録件数 ： {{korean_food_count}}</h5></p>
+    <a href="./contact.html" class="btn btn-primary" title=""> 韓食リストへ</a>
   </div>
 
+  <div class="col-xs-12 col-md-4 section-container-spacer">
+    <img class="img-responsive" alt="" src="{% static 'top/images/breakfast.png' %}">
+    <h2>朝食</h2>
+    <p><h5>登録件数 ： {{breakfast_count}}</h5></p>
+    <a href="./contact.html" class="btn btn-primary" title=""> 朝食リストへ</a>
+  </div>
+
+  <div class="col-xs-12 col-md-4 section-container-spacer">
+    <img class="img-responsive" alt="" src="{% static 'top/images/lunch.png' %}">
+    <h2>昼食</h2>
+    <p><h5>登録件数 ： {{lunch_count}}</h5></p>
+    <a href="./contact.html" class="btn btn-primary" title=""> 昼食リストへ</a>
+  </div>
+
+  <div class="col-xs-12 col-md-4 section-container-spacer">
+    <img class="img-responsive" alt="" src="{% static 'top/images/dinner.png' %}">
+    <h2>夕食</h2>
+    <p><h5>登録件数 ： {{dinner_count}}</h5></p>
+    <a href="./contact.html" class="btn btn-primary" title=""> 夕食リストへ</a>
+  </div>
 </div>
