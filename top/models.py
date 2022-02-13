@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 class Ingredient(models.Model):
     ingredient = models.CharField(max_length=20)
+    del_flg = models.IntegerField(default=0)
     regist = models.DateTimeField(auto_now_add=True)
     update = models.DateTimeField(auto_now_add=True)
 
@@ -15,6 +16,7 @@ class Ingredient(models.Model):
 
 class Course(models.Model):
     course = models.CharField(max_length=20)
+    del_flg = models.IntegerField(default=0)
     regist = models.DateTimeField(auto_now_add=True)
     update = models.DateTimeField(auto_now_add=True)
 
@@ -27,6 +29,7 @@ class Course(models.Model):
                
 class Type(models.Model):
     type = models.CharField(max_length=20)
+    del_flg = models.IntegerField(default=0)
     regist = models.DateTimeField(auto_now_add=True)
     update = models.DateTimeField(auto_now_add=True)
 
@@ -46,6 +49,7 @@ class Dish(models.Model):
     ingredient5 = models.ForeignKey(Ingredient, on_delete=models.CASCADE, related_name="ingredient5")
     course = models.ForeignKey('Course', on_delete=models.CASCADE)
     type = models.ForeignKey('Type', on_delete=models.CASCADE)
+    del_flg = models.IntegerField(default=0)
     regist = models.DateTimeField(auto_now_add=True)
     update = models.DateTimeField(auto_now_add=True)
     
