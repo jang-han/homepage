@@ -1,0 +1,94 @@
+{% load static %}
+
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <img class="img-responsive" alt="" src="{% static 'top/images/img-10.jpg' %}">
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <h1>食材</h1>
+    
+    <p>新しい食材を登録したり、現在の食材リストを確認しましょう！</p>
+    
+    <h3>食材リスト件数 : {{ingredient_count}}件 </h3>
+    
+    
+    <table>
+        {% for item in ingredient_list %}
+        <tr>
+            <td>{{item.ingredient}} </td>
+            <td>登録日 : {{item.regist}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <table>
+        <tbody>
+        <tr>
+            {% if ingredient_list.has_previous %}
+            <td>
+                <a href="{%  url 'ingredient' %}">&laquo; first  </a>&nbsp;&nbsp;
+            </td>
+            <td>
+                <a href="{%  url 'ingredient' %}/{{ingredient_list.previous_page_number}}">&laquo; prev  </a>&nbsp;&nbsp;
+            </td>
+            {% else %}
+            <td>
+                <a>&laquo; first  </a>&nbsp;&nbsp;
+            </td>
+            <td>
+                <a>&laquo; prev  </a>&nbsp;&nbsp;
+            </td>
+            {% endif %}
+
+            <td>
+                <a>{{ingredient_list.number}}/{{ingredient_list.paginator.num_pages}}  </a>&nbsp;&nbsp;
+            </td>
+
+            {% if ingredient_list.has_next %}
+            <td>
+                <a href="{%  url 'ingredient' %}/{{ingredient_list.next_page_number}}">next &raquo;  </a>&nbsp;&nbsp;
+            </td>
+            <td>
+                <a href="{%  url 'ingredient' %}/{{ingredient_list.paginator.num_pages}}">last &raquo;  </a>&nbsp;&nbsp;
+            </td>
+            {% else %}
+            <td>
+                <a>next &raquo;  </a>&nbsp;&nbsp;
+            </td>
+            <td>
+                <a>last &raquo;  </a>&nbsp;&nbsp;
+            </td>
+            {% endif %}
+        </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <h3>食材検索 </h3>
+    {{find}} {{msg}}<br>
+    <form action="{% url 'search' %}" method="post">
+        {% csrf_token %}
+        <input id="find" type="text" name="find">
+        <input type="submit" value="検索" class="btn btn-primary">
+    </form>
+
+    <table>
+        {% for item in result %}
+        <tr>
+            <td>{{item.ingredient}} &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> 登録日 : {{item.regist}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <br>
+    
+
+    <h3>食材登録 </h3>
+    <form action="{% url 'regist' %}" method="post">
+        {% csrf_token %}
+        材料名 : <input id="new_ingredient" type="text" name="new_ingredient"><br>
+        <input type="submit" value="登録" class="btn btn-primary">
+    </form>
+ </div>
+</div>
